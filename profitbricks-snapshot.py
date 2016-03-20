@@ -1,11 +1,15 @@
 #!/usr/bin/env python
 
-import configparser
+try:
+    from configparser import ConfigParser
+except ImportError:
+    from ConfigParser import SafeConfigParser as ConfigParser
+
 from datetime import datetime, timedelta
 from profitbricks.client import ProfitBricksService
 
 # read config
-config = configparser.ConfigParser()
+config = ConfigParser()
 config.read('settings.cfg')
 
 datacenter_id = config.get('snapshots', 'datacenter_id')
