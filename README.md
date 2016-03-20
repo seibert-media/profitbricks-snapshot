@@ -1,6 +1,6 @@
 # profitbricks-snapshots
 
-profitbricks-snapshots is a tool to create daily block based images of virtual machines in a [Profitbricks](https://www.profitbricks.com/) private cloud.
+profitbricks-snapshots is a tool to create daily block based images of virtual machines in the [Profitbricks](https://www.profitbricks.com/) private cloud.
 
 ## Installation
 
