@@ -15,7 +15,13 @@ It also deletes snapshots that are older than a defined retention time in days (
 
 1. Create and adjust your settings:
 
-    ``cp settings.cfg.example settings.cfg`` 
+    ``cp settings.cfg.example settings.cfg``
+
+1. Execute profitbricks-snapshot every day via cron:
+
+    ``crontab -e``
+
+    ``0 3 * * * cd /path/to/profitbricks-snapshot && python profitbricks-snapshot.py``
 
 ## Settings
 
