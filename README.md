@@ -1,7 +1,7 @@
 # profitbricks-snapshot
 
 profitbricks-snapshot is a tool to create daily block based images of virtual machines in the [Profitbricks](https://www.profitbricks.com/) private cloud.
-It also deletes snapshots that are older than a defined retention time in days (default: 7 days).
+It also deletes snapshots that are older than a defined retention time in days.
 
 ## Installation
 
@@ -43,7 +43,7 @@ Username and password of your Profitbricks account.
 All volumes in this datacenter will be snapshotted.
 
 - snapshot_prefix:
-Prefix string of snapshot names. Default name of snapshots: "AUTOSNAP-*YYYMMDD*-*VOLUMENAME*"
+Prefix string of snapshot names. Name of snapshots from example: "AUTOSNAP-*YYYMMDD*-*VOLUMENAME*"
 
 - retention_time:
 Retention time in days. Older snapshots will be deleted.

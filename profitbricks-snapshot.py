@@ -13,8 +13,8 @@ config = ConfigParser()
 config.read('settings.cfg')
 
 datacenter_id = config.get('snapshots', 'datacenter_id')
-snapshot_prefix = config.get('snapshots', 'snapshot_prefix', fallback="AUTOSNAP")
-retention_time = config.getint('snapshots', 'retention_time', fallback=7)
+snapshot_prefix = config.get('snapshots', 'snapshot_prefix')
+retention_time = config.getint('snapshots', 'retention_time')
 
 pb = ProfitBricksService(
     username=config.get('credentials', 'username'),
