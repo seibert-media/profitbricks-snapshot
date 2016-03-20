@@ -1,12 +1,13 @@
-# profitbricks-snapshots
+# profitbricks-snapshot
 
-profitbricks-snapshots is a tool to create daily block based images of virtual machines in the [Profitbricks](https://www.profitbricks.com/) private cloud.
+profitbricks-snapshot is a tool to create daily block based images of virtual machines in the [Profitbricks](https://www.profitbricks.com/) private cloud.
+It also deletes snapshots that are older than a defined retention time in days (default: 7 days).
 
 ## Installation
 
-1. Get profitbricks-snapshots:
+1. Get profitbricks-snapshot:
 
-    ``git clone https://github.com/seibert-media/profitbricks-snapshots.git``
+    ``git clone https://github.com/seibert-media/profitbricks-snapshot.git``
 
 1. Install python requirements:
 
@@ -43,7 +44,7 @@ Retention time in days. Older snapshots will be deleted.
 
 ## Usage
 
-	python profitbricks-snapshots.py 
+	python profitbricks-snapshot.py
 
 ## License
 
