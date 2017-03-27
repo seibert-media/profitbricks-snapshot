@@ -7,6 +7,7 @@ except ImportError:
 
 from datetime import datetime, timedelta
 from profitbricks.client import ProfitBricksService
+from time import sleep
 
 # read config
 config = ConfigParser()
@@ -15,6 +16,7 @@ config.read('settings.cfg')
 datacenter_id = config.get('snapshots', 'datacenter_id')
 snapshot_prefix = config.get('snapshots', 'snapshot_prefix')
 retention_time = config.getint('snapshots', 'retention_time')
+sleep_seconds = config.getint('snapshots', 'sleep_seconds')
 
 pb = ProfitBricksService(
     username=config.get('credentials', 'username'),
@@ -36,6 +38,7 @@ for volume_item in volumes['items']:
 
     print("creating snapshot: {}".format(snapshot_name))
     pb.create_snapshot(datacenter_id, volume_id, snapshot_name)
+    sleep(sleep_seconds)
 
 # delete old snapshots
 snapshots = pb.list_snapshots()
@@ -54,3 +57,4 @@ for snapshot_item in snapshots['items']:
     if snapshot_date < now - timedelta(days=retention_time):
         print("deleting snapshot: {} (created: {})".format(snapshot_name, snapshot_created))
         pb.delete_snapshot(snapshot_id)
+        sleep(sleep_seconds)
