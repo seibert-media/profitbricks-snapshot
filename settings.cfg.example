@@ -6,3 +6,4 @@ password: secret
 datacenter_id: abc12345a-12ab-3a4b-1a23-1ab2cd345e67
 snapshot_prefix: AUTOSNAP
 retention_time: 7
+sleep_seconds: 60

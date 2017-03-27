@@ -35,6 +35,7 @@ Example settings.cfg:
 	datacenter_id: abc12345a-12ab-3a4b-1a23-1ab2cd345e67
 	snapshot_prefix: AUTOSNAP
 	retention_time: 7
+	sleep_seconds: 60
 
 - credentials:
 Username and password of your Profitbricks account.
@@ -47,6 +48,9 @@ Prefix string of snapshot names. Name of snapshots from example: "AUTOSNAP-*YYYM
 
 - retention_time:
 Retention time in days. Older snapshots will be deleted.
+
+- sleep_seconds:
+Number of seconds to wait between the creation of snapshots.
 
 ## Usage
 
